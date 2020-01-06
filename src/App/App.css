@@ -1,6 +1,5 @@
 .App {
   box-sizing: border-box;
-  border: 2px solid yellow;
 }
 
 .App-body {
@@ -18,8 +17,24 @@
   color: #61dafb;
 }
 
-.App-NavBar-wrapper {
+.App-Navbar {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  background-color: yellow;
   position: fixed;
   top: 0;
-  overflow: hidden;
+}
+.Navbar-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  width: 60%;
+  margin-top: 5vh;
+}
+.NavBar-list {
+  list-style-type: none;
 }

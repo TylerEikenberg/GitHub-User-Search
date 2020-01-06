@@ -1,16 +1,28 @@
 import React from "react";
 import "./App.css";
-import { NavBar } from "../Components/";
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import { SearchPage } from "../Pages";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-body">
-        <header className="App-NavBar-wrapper">
-          <NavBar></NavBar>
-        </header>
+    <BrowserRouter>
+      <div className="App">
+        <div className="App-body">
+          <header className="App-Navbar">
+            <ul className="Navbar-links-container">
+              <NavLink to="/">
+                <li className="NavBar-list">Home</li>
+              </NavLink>
+              <NavLink to="/search">
+                <li className="NavBar-list">Search</li>
+              </NavLink>
+            </ul>
+          </header>
+          <Route path="/"></Route>
+          <Route path="/search" exact component={SearchPage}></Route>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
