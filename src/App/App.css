@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -22,7 +21,7 @@
   align-self: center;
   justify-content: center;
   width: 100vw;
-  height: 100px;
+  height: 50px;
   background-color: #d8a47f;
   position: fixed;
   top: 0;
@@ -33,7 +32,7 @@
   justify-content: space-around;
   padding: 0;
   width: 60%;
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 .NavBar-list {
   list-style-type: none;

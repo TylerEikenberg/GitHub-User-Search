@@ -5,8 +5,7 @@ function SearchBar() {
   return (
     <div>
       <form onSubmit>
-        <label>Search</label>
-        <input type="text" placeholder="User Name" />
+        <input className="SearchBar-input" type="text" placeholder="Search" />
       </form>
     </div>
   );

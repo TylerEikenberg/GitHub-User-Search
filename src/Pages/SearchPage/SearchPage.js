@@ -5,7 +5,8 @@ import { SearchBar } from "../../Components/";
 function SearchPage() {
   return (
     <div className="SearchPage-container">
-      search page
+      <h2 className="SearchPage-header">Search Users on GitHub</h2>
+      <div className="SearchPage-searchbar-wrapper"></div>
       <SearchBar />
     </div>
   );
