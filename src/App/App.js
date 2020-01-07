@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
-import { SearchPage } from "../Pages";
+import { SearchPage, UserDetailsPage } from "../Pages";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           </header>
           <Route path="/"></Route>
           <Route path="/search" exact component={SearchPage}></Route>
-          <Route exact path="/user/:name" />
+          <Route path="/user/:name" component={UserDetailsPage} />
         </div>
       </div>
     </BrowserRouter>
