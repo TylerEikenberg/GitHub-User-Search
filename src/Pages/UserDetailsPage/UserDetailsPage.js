@@ -1,7 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useEffect } from "react-redux";
 import "./UserDetailsPage.css";
 import { Avatar, StatBox } from "../../Components/";
+
+/**
+ * -todo
+ * !important --- instead of pulling data from state to display info, make another fetch call so that you can go directly to users/{usersname} and set state again
+ *
+ * reuse asyncfetch dispatch to get data for this page
+ *
+ * make another fetch to get list of users github repos
+ * create component that will display a single repo
+ * display all repos
+ */
 
 function UserDetailsPage() {
   const { fetchUserReducer: userData } = useSelector(state => state);
