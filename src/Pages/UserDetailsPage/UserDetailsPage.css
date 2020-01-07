@@ -16,18 +16,17 @@
 .UserDetailsPage-user-header {
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid black; */
+  border: 2px solid blue;
 }
 .UserDetailsPage-avatar-container {
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 .UserDetailsPage-top-details {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 .UserDetailsPage-stats-container {
   display: flex;
