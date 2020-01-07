@@ -49,15 +49,7 @@ function SearchBar() {
           image={fetchedData.data.avatar_url}
         />
       ) : null}
-
-      {/* <h2>{fetchedData.data.login ? fetchedData.data.login : null}</h2>
       {fetchedDataError.error ? <h3>Not found</h3> : null}
-
-      <img
-        style={{ width: "100px" }}
-        src={fetchedData.data.avatar_url}
-        alt=""
-      /> */}
     </div>
   );
 }

@@ -20,6 +20,7 @@ function App() {
           </header>
           <Route path="/"></Route>
           <Route path="/search" exact component={SearchPage}></Route>
+          <Route exact path="/user/:name" />
         </div>
       </div>
     </BrowserRouter>
