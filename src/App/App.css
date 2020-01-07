@@ -3,7 +3,7 @@
 }
 
 .App-body {
-  background-color: #eff1c5;
+  background-color: var(--pale-spring);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   justify-content: center;
   width: 100vw;
   height: 50px;
-  background-color: #d8a47f;
+  background-color: var(--tumbleweed);
   position: fixed;
   top: 0;
 }
