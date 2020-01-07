@@ -1,5 +1,6 @@
-import React from "react";
-import { useSelector, useEffect } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchUserDataAsync } from "../../Redux/Actions";
 import "./UserDetailsPage.css";
 import { Avatar, StatBox } from "../../Components/";
 
@@ -15,6 +16,8 @@ import { Avatar, StatBox } from "../../Components/";
  */
 
 function UserDetailsPage() {
+  const [username, setUsername] = useState("");
+  const dispatch = useDispatch();
   const { fetchUserReducer: userData } = useSelector(state => state);
   const {
     login,
