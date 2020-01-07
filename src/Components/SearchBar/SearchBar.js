@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions/";
+import { UserDrop } from "../index";
 import "./SearchBar.css";
 
 /**
@@ -27,10 +28,10 @@ function SearchBar() {
 
   useEffect(() => {
     dispatch(fetchUserDataAsync(username));
-  }, [username]);
+  }, [username, dispatch]);
 
   return (
-    <div>
+    <div className="SearchBar-container">
       <form>
         <input
           className="SearchBar-input"
@@ -41,14 +42,15 @@ function SearchBar() {
           name="username"
         />
       </form>
-      <h2>{fetchedData.data.login ? fetchedData.data.login : null}</h2>
+      <UserDrop />
+      {/* <h2>{fetchedData.data.login ? fetchedData.data.login : null}</h2>
       {fetchedDataError.error ? <h3>Not found</h3> : null}
 
       <img
         style={{ width: "100px" }}
         src={fetchedData.data.avatar_url}
         alt=""
-      />
+      /> */}
     </div>
   );
 }

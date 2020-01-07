@@ -1,3 +1,10 @@
+.SearchBar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .SearchBar-input {
   width: 50vw;
   font-size: 1.5rem;
