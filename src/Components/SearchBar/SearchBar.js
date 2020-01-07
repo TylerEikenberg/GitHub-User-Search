@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions/";
 import "./SearchBar.css";
@@ -9,7 +9,7 @@ import "./SearchBar.css";
  *
  */
 function SearchBar() {
-  const [username, setUsername] = useState("Username");
+  const [username, setUsername] = useState("");
   const dispatch = useDispatch();
   const fetchedData = useSelector(state => ({
     data: state.fetchUserReducer.userData
@@ -18,13 +18,16 @@ function SearchBar() {
     error: state.fetchUserReducer.error
   }));
 
-  const onChangeHandle = e => {
-    e.preventDefault();
-    setUsername(e.target.value);
+  // const onChangeHandle = e => {
+  //   setUsername(e.target.value);
+  //   console.log(username);
+  //   // dispatch(fetchUserDataAsync(username));
+  //   return;
+  // };
+
+  useEffect(() => {
     dispatch(fetchUserDataAsync(username));
-    console.log(fetchedDataError);
-    return;
-  };
+  }, [username]);
 
   return (
     <div>
@@ -33,11 +36,14 @@ function SearchBar() {
           className="SearchBar-input"
           type="text"
           placeholder="Search"
-          onChange={onChangeHandle}
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+          name="username"
         />
       </form>
       <h2>{fetchedData.data.login ? fetchedData.data.login : null}</h2>
       {fetchedDataError.error ? <h3>Not found</h3> : null}
+
       <img
         style={{ width: "100px" }}
         src={fetchedData.data.avatar_url}
