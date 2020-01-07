@@ -27,6 +27,7 @@ function SearchBar() {
   // };
 
   useEffect(() => {
+    // comment back in to fetch
     dispatch(fetchUserDataAsync(username));
   }, [username, dispatch]);
 
@@ -42,7 +43,13 @@ function SearchBar() {
           name="username"
         />
       </form>
-      <UserDrop />
+      {fetchedData.data.login ? (
+        <UserDrop
+          name={fetchedData.data.login}
+          image={fetchedData.data.avatar_url}
+        />
+      ) : null}
+
       {/* <h2>{fetchedData.data.login ? fetchedData.data.login : null}</h2>
       {fetchedDataError.error ? <h3>Not found</h3> : null}
 

@@ -1,17 +1,66 @@
 .UserDrop-wrapper {
-  border: 1px solid gold;
-  width: 45vw;
-  height: 60px;
+  display: flex;
+
+  width: 60vw;
+  height: 100px;
   margin-top: 3vh;
   position: relative;
+  background-color: #fff;
 }
 .UserDrop-wrapper::after {
   content: "";
+
   height: 10px;
-  left: 20%;
+  left: 15%;
   position: absolute;
-  background-color: black;
-  padding: 10px;
+  background-color: #fff;
+  padding: 20px;
   margin-top: -15px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.UserDrop-image-container {
+  z-index: 1;
+  height: 100px;
+  width: 40%;
+  border: 1px solid black;
+}
+.UserDrop-name-container {
+  z-index: 1;
+  height: 100px;
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 2%;
+  color: black;
+  border: 1px solid black;
+}
+.UserDrop-image-styles {
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  border: 1px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+  .UserDrop-wrapper {
+    height: 200px;
+  }
+  .UserDrop-image-container {
+    height: 200px;
+  }
+  .UserDrop-image-styles {
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .UserDrop-wrapper {
+    height: 250px;
+  }
+  .UserDrop-image-container {
+    height: 250px;
+  }
+  .UserDrop-image-styles {
+    margin-top: 8%;
+  }
 }
