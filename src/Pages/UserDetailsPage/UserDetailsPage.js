@@ -13,9 +13,18 @@ function UserDetailsPage() {
           <Avatar image={userData.userData.avatar_url} />
         </div>
         <div className="UserDetailsPage-stats-container">
-          <StatBox number={142} stat={"Repos"}></StatBox>
-          <StatBox number={20} stat={"Followers"}></StatBox>
-          <StatBox number={92} stat={"Following"}></StatBox>
+          <StatBox
+            number={userData.userData.public_repos}
+            stat={"Repos"}
+          ></StatBox>
+          <StatBox
+            number={userData.userData.followers}
+            stat={"Followers"}
+          ></StatBox>
+          <StatBox
+            number={userData.userData.following}
+            stat={"Following"}
+          ></StatBox>
         </div>
       </header>
     </div>
