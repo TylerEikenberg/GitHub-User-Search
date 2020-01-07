@@ -12,19 +12,27 @@ function UserDetailsPage() {
         <div className="UserDetailsPage-avatar-container">
           <Avatar image={userData.userData.avatar_url} />
         </div>
-        <div className="UserDetailsPage-stats-container">
-          <StatBox
-            number={userData.userData.public_repos}
-            stat={"Repos"}
-          ></StatBox>
-          <StatBox
-            number={userData.userData.followers}
-            stat={"Followers"}
-          ></StatBox>
-          <StatBox
-            number={userData.userData.following}
-            stat={"Following"}
-          ></StatBox>
+
+        <div className="UserDetailsPage-top-details">
+          <div className="UserDetailsPage-user-name">
+            <h3 className="UserDetailsPage-login-h3">
+              {userData.userData.login}
+            </h3>
+          </div>
+          <div className="UserDetailsPage-stats-container">
+            <StatBox
+              number={userData.userData.public_repos}
+              stat={"Repos"}
+            ></StatBox>
+            <StatBox
+              number={userData.userData.followers}
+              stat={"Followers"}
+            ></StatBox>
+            <StatBox
+              number={userData.userData.following}
+              stat={"Following"}
+            ></StatBox>
+          </div>
         </div>
       </header>
     </div>

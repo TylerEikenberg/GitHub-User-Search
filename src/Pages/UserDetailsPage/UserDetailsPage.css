@@ -3,17 +3,33 @@
   flex-direction: column;
   width: 90vw;
   margin-top: 10vh;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  text-align: right;
 }
+
+.UserDetailsPage-login-h3 {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
 .UserDetailsPage-user-header {
   display: flex;
   justify-content: space-between;
+  /* border: 2px solid black; */
+}
+.UserDetailsPage-avatar-container {
+  /* border: 2px solid black; */
 }
 
-.UserDetailsPage-avatar-container {
-  border: 2px solid;
+.UserDetailsPage-top-details {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  border: 1px solid red;
 }
 .UserDetailsPage-stats-container {
   display: flex;
-  border: 2px solid;
+  border: 2px solid black;
 }
