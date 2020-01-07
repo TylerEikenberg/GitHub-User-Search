@@ -1,12 +1,19 @@
 .UserDetailsPage-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 90vw;
   margin-top: 10vh;
   border: 2px solid black;
 }
-.UserDetailsPage-header {
-  border: 2px solid black;
+.UserDetailsPage-user-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.UserDetailsPage-avatar-container {
+  border: 2px solid;
+}
+.UserDetailsPage-stats-container {
+  display: flex;
+  border: 2px solid;
 }

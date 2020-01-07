@@ -1,0 +1,21 @@
+.StatBox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  border: 1px solid black;
+}
+.StatBox-h3 {
+  font-size: 1rem;
+  border: 1px solid;
+  padding: 1px;
+  margin: 1vh 0 0 0;
+}
+
+.StatBox-top {
+  color: #000;
+}
+.StatBox-bottom {
+  color: #9eacbe;
+}
