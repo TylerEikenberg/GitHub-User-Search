@@ -3,12 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions";
 import "./UserDetailsPage.css";
 import { Avatar, StatBox } from "../../Components/";
+const axios = require("axios");
 
 /**
  * -todo
- * !important --- instead of pulling data from state to display info, make another fetch call so that you can go directly to users/{usersname} and set state again
- *
- * reuse asyncfetch dispatch to get data for this page
  *
  * make another fetch to get list of users github repos
  * create component that will display a single repo
@@ -16,7 +14,10 @@ import { Avatar, StatBox } from "../../Components/";
  */
 
 function UserDetailsPage({ match }) {
-  const [username, setUsername] = useState(match.params.name);
+  const [username] = useState(match.params.name);
+  const [repoList, setRepoList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [repoError, setRepoError] = useState(null);
   const dispatch = useDispatch();
   const { fetchUserReducer: userData, fetchedDataError: error } = useSelector(
     state => state
@@ -25,6 +26,19 @@ function UserDetailsPage({ match }) {
   useEffect(() => {
     // comment back in to fetch
     dispatch(fetchUserDataAsync(username));
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const result = await axios(
+          `https://api.github.com/users/${username}/repos`
+        );
+        setRepoList(result.data);
+        setLoading(false);
+      } catch (error) {
+        setRepoError(error.response.data);
+      }
+    };
+    fetchData();
   }, [username, dispatch]);
 
   // const { fetchUserReducer: userData } = useSelector(state => state);
