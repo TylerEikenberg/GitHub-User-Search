@@ -87,9 +87,10 @@ function UserDetailsPage({ match }) {
           </li>
         </ul>
       </div>
+      <span className="udp-hr-line"></span>
 
       {repoList.map(item => {
-        return <RepoBox repoData={item} />;
+        return <RepoBox key={item.id} repoData={item} />;
       })}
     </div>
   );

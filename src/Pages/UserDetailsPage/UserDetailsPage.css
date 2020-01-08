@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 90vw;
   margin-top: 10vh;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .UserDetailsPage-login-h3 {
@@ -15,17 +15,17 @@
 .UserDetailsPage-user-header {
   display: flex;
   justify-content: space-between;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 .UserDetailsPage-avatar-container {
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .UserDetailsPage-top-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .UserDetailsPage-stats-container {
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .UserDetailsPage-user-info {
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   margin-top: 3vh;
 }
 .list-style {
@@ -44,4 +44,8 @@
 .udp-name-style {
   font-size: 1rem;
   font-weight: bold;
+}
+
+.udp-hr-line {
+  border-top: 1px solid #afbfd2;
 }

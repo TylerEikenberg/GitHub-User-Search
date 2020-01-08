@@ -1,11 +1,19 @@
 .RepoBox-container {
   width: 90vw;
-  border: 1px solid blue;
+  border: 1px solid #afbfd2;
+  background-color: #edf2f8;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin-top: 1vh;
+  padding: 5px 0 5px 0;
 }
+.RepoBox-repo-link {
+  color: #011936;
+  margin-left: 3vw;
+  text-decoration: none;
+}
+
 .RepoBox-stats-container {
   display: flex;
   justify-content: space-around;
