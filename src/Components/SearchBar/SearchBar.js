@@ -19,16 +19,10 @@ function SearchBar() {
     error: state.fetchUserReducer.error
   }));
 
-  // const onChangeHandle = e => {
-  //   setUsername(e.target.value);
-  //   console.log(username);
-  //   // dispatch(fetchUserDataAsync(username));
-  //   return;
-  // };
-
   useEffect(() => {
-    // comment back in to fetch
-    dispatch(fetchUserDataAsync(username));
+    setTimeout(() => {
+      dispatch(fetchUserDataAsync(username));
+    }, 1500);
   }, [username, dispatch]);
 
   return (

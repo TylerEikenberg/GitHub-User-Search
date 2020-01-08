@@ -25,6 +25,7 @@
   background-color: var(--sub-color);
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 .Navbar-links-container {
   display: flex;

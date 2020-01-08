@@ -17,7 +17,7 @@ export const fetchUserDataAsync = username => {
       .get(`https://api.github.com/users/${username}`, {
         auth: {
           username: "tylereikenberg",
-          password: "3d1b0916a155717f12c814fb69fb2e70398b9bcf"
+          password: "e714f1574e5feb7bc44d7ce2c0049aad290c5840"
         }
       })
       .then(({ data }) => {
