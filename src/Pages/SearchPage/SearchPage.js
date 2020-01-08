@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchPage.css";
-import { SearchBar, RepoBox } from "../../Components/";
+import { SearchBar } from "../../Components/";
 
 function SearchPage() {
   return (
@@ -9,7 +9,6 @@ function SearchPage() {
       <div className="SearchPage-searchbar-wrapper">
         <SearchBar />
       </div>
-      <RepoBox />
     </div>
   );
 }

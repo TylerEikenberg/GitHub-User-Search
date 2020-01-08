@@ -1,0 +1,12 @@
+.RepoBox-container {
+  width: 90vw;
+  border: 1px solid blue;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+.RepoBox-stats-container {
+  display: flex;
+  justify-content: space-around;
+}

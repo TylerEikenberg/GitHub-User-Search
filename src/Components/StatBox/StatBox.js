@@ -1,7 +1,7 @@
 import React from "react";
 import "./StatBox.css";
 
-function StatBox({ number, stat }) {
+function StatBox({ number = 0, stat = "none" }) {
   return (
     <div className="StatBox-container">
       <h3 className="StatBox-h3 StatBox-top">{number}</h3>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions";
 import "./UserDetailsPage.css";
-import { Avatar, StatBox } from "../../Components/";
+import { Avatar, StatBox, RepoBox } from "../../Components/";
 const axios = require("axios");
 
 /**
@@ -87,11 +87,10 @@ function UserDetailsPage({ match }) {
           </li>
         </ul>
       </div>
-      <ul>
-        {repoList.map(item => {
-          return <li>{item.name}</li>;
-        })}
-      </ul>
+
+      {repoList.map(item => {
+        return <RepoBox repoData={item} />;
+      })}
     </div>
   );
 }
