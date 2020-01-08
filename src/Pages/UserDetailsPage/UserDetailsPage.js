@@ -15,10 +15,19 @@ import { Avatar, StatBox } from "../../Components/";
  * display all repos
  */
 
-function UserDetailsPage() {
-  const [username, setUsername] = useState("");
+function UserDetailsPage({ match }) {
+  const [username, setUsername] = useState(match.params.name);
   const dispatch = useDispatch();
-  const { fetchUserReducer: userData } = useSelector(state => state);
+  const { fetchUserReducer: userData, fetchedDataError: error } = useSelector(
+    state => state
+  );
+
+  useEffect(() => {
+    // comment back in to fetch
+    dispatch(fetchUserDataAsync(username));
+  }, [username, dispatch]);
+
+  // const { fetchUserReducer: userData } = useSelector(state => state);
   const {
     login,
     avatar_url,
@@ -30,7 +39,7 @@ function UserDetailsPage() {
     following,
     created_at
   } = userData.userData;
-  const userSince = created_at.slice(0, 4);
+  // const userSince = created_at.slice(0, 4);
   return (
     <div className="UserDetailsPage-container">
       <header className="UserDetailsPage-user-header">
@@ -43,9 +52,9 @@ function UserDetailsPage() {
             <h3 className="UserDetailsPage-login-h3">{login}</h3>
           </div>
           <div className="UserDetailsPage-stats-container">
-            <StatBox number={public_repos} stat={"Repos"}></StatBox>
-            <StatBox number={followers} stat={"Followers"}></StatBox>
-            <StatBox number={following} stat={"Following"}></StatBox>
+            <StatBox stat={"Repos"}>{public_repos}</StatBox>
+            <StatBox stat={"Followers"}>{followers}</StatBox>
+            <StatBox stat={"Following"}>{following}</StatBox>
           </div>
         </div>
       </header>
@@ -54,7 +63,7 @@ function UserDetailsPage() {
         <ul>
           <li className="list-style udp-name-style">{name}</li>
           <li className="list-style">{bio}</li>
-          <li className="list-style">User Since {userSince}</li>
+          <li className="list-style">User Since {created_at}</li>
           <li className="list-style">
             <a target="_blank" rel="noopener noreferrer" href={html_url}>
               GitHub

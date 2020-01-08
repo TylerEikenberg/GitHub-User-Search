@@ -14,7 +14,12 @@ export const fetchUserDataFailure = error => {
 export const fetchUserDataAsync = username => {
   return dispatch => {
     return axios
-      .get(`https://api.github.com/users/${username}`)
+      .get(`https://api.github.com/users/${username}`, {
+        auth: {
+          username: "tylereikenberg",
+          password: "Appa12514"
+        }
+      })
       .then(({ data }) => {
         dispatch(fetchUserDataSuccess(data));
       })
