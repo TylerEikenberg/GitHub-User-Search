@@ -52,9 +52,9 @@ function UserDetailsPage({ match }) {
             <h3 className="UserDetailsPage-login-h3">{login}</h3>
           </div>
           <div className="UserDetailsPage-stats-container">
-            <StatBox stat={"Repos"}>{public_repos}</StatBox>
-            <StatBox stat={"Followers"}>{followers}</StatBox>
-            <StatBox stat={"Following"}>{following}</StatBox>
+            <StatBox number={public_repos} stat={"Repos"}></StatBox>
+            <StatBox number={followers} stat={"Followers"}></StatBox>
+            <StatBox number={following} stat={"Following"}></StatBox>
           </div>
         </div>
       </header>
