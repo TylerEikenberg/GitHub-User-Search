@@ -28,7 +28,7 @@ function UserDetailsPage({ match }) {
   }, [username, dispatch]);
 
   // const { fetchUserReducer: userData } = useSelector(state => state);
-  const {
+  let {
     login,
     avatar_url,
     html_url,
@@ -39,7 +39,7 @@ function UserDetailsPage({ match }) {
     following,
     created_at
   } = userData.userData;
-  // const userSince = created_at.slice(0, 4);
+
   return (
     <div className="UserDetailsPage-container">
       <header className="UserDetailsPage-user-header">
@@ -63,7 +63,9 @@ function UserDetailsPage({ match }) {
         <ul>
           <li className="list-style udp-name-style">{name}</li>
           <li className="list-style">{bio}</li>
-          <li className="list-style">User Since {created_at}</li>
+          <li className="list-style">
+            User Since {created_at ? created_at.slice(0, 4) : null}
+          </li>
           <li className="list-style">
             <a target="_blank" rel="noopener noreferrer" href={html_url}>
               GitHub
