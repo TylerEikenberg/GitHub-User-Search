@@ -10,17 +10,20 @@ function App() {
         <div className="App-body">
           <header className="App-Navbar">
             <ul className="Navbar-links-container">
-              <NavLink to="/">
-                <li className="NavBar-list">Home</li>
+              <NavLink className="NavBar-list" to="/">
+                <li>Home</li>
               </NavLink>
-              <NavLink to="/search">
-                <li className="NavBar-list">Search</li>
+              <NavLink className="NavBar-list" to="/search">
+                <li>Search</li>
               </NavLink>
             </ul>
           </header>
           <Route path="/"></Route>
           <Route path="/search" exact component={SearchPage}></Route>
           <Route path="/user/:name" component={UserDetailsPage} />
+          <footer className="App-footer">
+            GitHub User Search by Tyler Eikenberg | 2020
+          </footer>
         </div>
       </div>
     </BrowserRouter>

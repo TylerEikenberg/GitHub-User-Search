@@ -1,5 +1,6 @@
 .App {
   box-sizing: border-box;
+  font-family: var(--app-font);
 }
 
 .App-body {
@@ -10,6 +11,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 15vh;
 }
 
 .App-link {
@@ -37,4 +39,22 @@
 }
 .NavBar-list {
   list-style-type: none;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.NavBar-list:hover {
+  color: var(--link-color-hover);
+}
+.App-footer {
+  margin-top: 5vh;
+  padding-top: 10px;
+  background-color: var(--sub-color);
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  color: #afbfd2;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
 }

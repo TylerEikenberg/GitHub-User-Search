@@ -1,6 +1,9 @@
 :root {
   --bg-color: #cdedf6;
   --sub-color: #edf2f8;
+  --link-color: #011936;
+  --link-color-hover: #5d6c7f;
+  --app-font: "Rubik", sans-serif;
 }
 
 body {
