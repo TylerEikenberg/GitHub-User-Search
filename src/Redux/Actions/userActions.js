@@ -1,3 +1,4 @@
+const API_KEY = process.env.API_KEY;
 const axios = require("axios");
 
 export const fetchUserData = () => {
@@ -17,7 +18,7 @@ export const fetchUserDataAsync = username => {
       .get(`https://api.github.com/users/${username}`, {
         auth: {
           username: "tylereikenberg",
-          password: "507a66f827dfc20e1e3e71041f8b162a3c21125e"
+          password: API_KEY
         }
       })
       .then(({ data }) => {
