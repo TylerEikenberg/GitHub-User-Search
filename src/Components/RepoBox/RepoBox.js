@@ -10,9 +10,9 @@ function RepoBox({ repoData }) {
         <a href={repoData.html_url}>{repoData.name}</a>
       </span>
       <span className="RepoBox-stats-container">
-        <StatBox />
-        <StatBox />
-        <StatBox />
+        <StatBox number={repoData.stargazers_count} stat={"Stars"} />
+        <StatBox number={repoData.forks} stat={"Forks"} />
+        <StatBox number={repoData.watchers} stat={"Watchers"} />
       </span>
     </div>
   );
