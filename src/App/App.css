@@ -46,6 +46,10 @@
 .NavBar-list:hover {
   color: var(--link-color-hover);
 }
+.NavBar-list-active {
+  color: var(--link-color-hover);
+}
+
 .App-footer {
   margin-top: 5vh;
   padding-top: 10px;

@@ -10,10 +10,20 @@ function App() {
         <div className="App-body">
           <header className="App-Navbar">
             <ul className="Navbar-links-container">
-              <NavLink className="NavBar-list" to="/">
+              <NavLink
+                exact
+                className="NavBar-list"
+                activeClassName="NavBar-list-active"
+                to="/"
+              >
                 <li>Home</li>
               </NavLink>
-              <NavLink className="NavBar-list" to="/search">
+              <NavLink
+                exact
+                className="NavBar-list"
+                activeClassName="NavBar-list-active"
+                to="/search"
+              >
                 <li>Search</li>
               </NavLink>
             </ul>
