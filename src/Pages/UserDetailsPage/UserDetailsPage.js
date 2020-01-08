@@ -87,6 +87,11 @@ function UserDetailsPage({ match }) {
           </li>
         </ul>
       </div>
+      <ul>
+        {repoList.map(item => {
+          return <li>{item.name}</li>;
+        })}
+      </ul>
     </div>
   );
 }
