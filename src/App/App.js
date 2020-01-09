@@ -49,7 +49,16 @@ function App() {
           <Route path="/search" exact component={SearchPage}></Route>
           <Route path="/user/:name" component={UserDetailsPage} />
           <footer className="App-footer">
-            GitHub User Search by Tyler Eikenberg | 2020
+            GitHub User Search by{" "}
+            <a
+              className="NavBar-list"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://tylereikenberg.dev/"
+            >
+              {" "}
+              Tyler Eikenberg | 2020
+            </a>
           </footer>
         </div>
       </div>
