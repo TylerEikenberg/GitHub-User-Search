@@ -11,3 +11,9 @@
 .SearchPage-searchbar-wrapper {
   margin-top: 10vh;
 }
+
+@media only screen and (min-width: 1024px) {
+  .SearchPage-container {
+    width: 70vw;
+  }
+}
