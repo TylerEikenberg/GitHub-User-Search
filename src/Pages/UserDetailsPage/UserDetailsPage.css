@@ -1,6 +1,7 @@
 .UserDetailsPage-container {
   display: flex;
   flex-direction: column;
+
   width: 90vw;
   margin-top: 10vh;
   /* border: 2px solid black; */
@@ -15,10 +16,14 @@
   color: var(--link-color);
   text-decoration: none;
 }
+.udp-link-style:hover {
+  color: var(--link-color-hover);
+}
 
 .UserDetailsPage-user-header {
   display: flex;
   justify-content: space-between;
+  /* border: 2px solid black; */
 }
 
 .UserDetailsPage-github-button {
@@ -65,4 +70,18 @@
 
 .udp-hr-line {
   border-top: 1px solid #afbfd2;
+}
+
+@media only screen and (min-width: 1024px) {
+  .UserDetailsPage-container {
+    max-width: 70vw;
+
+    /* border: 2px solid black; */
+  }
+  .udp-RepoBoxs-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
