@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Redirect } from "react-router-dom";
 import { SearchPage, UserDetailsPage } from "../Pages";
 import { mdiHome, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -44,6 +44,7 @@ function App() {
               </NavLink>
             </ul>
           </header>
+          <Redirect from="/" to="/search" />
           <Route path="/"></Route>
           <Route path="/search" exact component={SearchPage}></Route>
           <Route path="/user/:name" component={UserDetailsPage} />
