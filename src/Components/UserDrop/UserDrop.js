@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
  */
 function UserDrop({ name, image }) {
   return (
-    <Link to={`/user/${name}`}>
+    <Link className="UserDrop-link-style" to={`/user/${name}`}>
       <div className="UserDrop-wrapper">
         <div className="UserDrop-image-container">
           <img className="UserDrop-image-styles" src={image} alt={name} />
