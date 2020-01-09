@@ -44,8 +44,8 @@ function App() {
               </NavLink>
             </ul>
           </header>
-          <Redirect from="/" to="/search" />
-          <Route path="/"></Route>
+          {/* <Redirect exact from="/" to="/search" /> */}
+          <Route path="/" exact component={SearchPage}></Route>
           <Route path="/search" exact component={SearchPage}></Route>
           <Route path="/user/:name" component={UserDetailsPage} />
           <footer className="App-footer">
