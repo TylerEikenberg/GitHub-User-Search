@@ -22,7 +22,7 @@ function SearchBar() {
   useEffect(() => {
     setTimeout(() => {
       dispatch(fetchUserDataAsync(username));
-    }, 1500);
+    }, 500);
   }, [username, dispatch]);
 
   return (
