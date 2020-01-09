@@ -20,6 +20,22 @@
 .UserDetailsPage-avatar-container {
   /* border: 2px solid black; */
 }
+.UserDetailsPage-github-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sub-color);
+  border-radius: 5px;
+  width: 40vw;
+  margin-top: 1vh;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(168, 194, 202, 1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(168, 194, 202, 1);
+  box-shadow: 0px 2px 5px 0px rgba(168, 194, 202, 1);
+  transition: background-color 0.2s;
+}
+.UserDetailsPage-github-button:hover {
+  background-color: var(--light-font-hover);
+}
 
 .UserDetailsPage-top-details {
   display: flex;

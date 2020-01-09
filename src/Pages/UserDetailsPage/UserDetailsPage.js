@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions";
 import "./UserDetailsPage.css";
 import { Avatar, StatBox, RepoBox } from "../../Components/";
+import { mdiGithubBox } from "@mdi/js";
+import Icon from "@mdi/react";
 const axios = require("axios");
 
 /**
@@ -69,6 +71,14 @@ function UserDetailsPage({ match }) {
             <StatBox number={public_repos} stat={"Repos"}></StatBox>
             <StatBox number={followers} stat={"Followers"}></StatBox>
             <StatBox number={following} stat={"Following"}></StatBox>
+          </div>
+          <div className="UserDetailsPage-github-button">
+            <Icon
+              className="icon"
+              path={mdiGithubBox}
+              size={1.5}
+              color="#C8CDD4"
+            />
           </div>
         </div>
       </header>
