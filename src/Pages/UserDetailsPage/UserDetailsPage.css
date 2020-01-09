@@ -11,15 +11,16 @@
   margin: 0;
   padding: 0;
 }
+.udp-link-style {
+  color: var(--link-color);
+  text-decoration: none;
+}
 
 .UserDetailsPage-user-header {
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid blue; */
 }
-.UserDetailsPage-avatar-container {
-  /* border: 2px solid black; */
-}
+
 .UserDetailsPage-github-button {
   display: flex;
   align-items: center;

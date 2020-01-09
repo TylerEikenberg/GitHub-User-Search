@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
+  padding-bottom: 10vh;
 }
 
 .App-link {
@@ -56,4 +57,7 @@
   height: 50px;
   text-align: center;
   color: #afbfd2;
+  position: fixed;
+  bottom: 0;
+  font-size: calc(10px + 1vmin);
 }

@@ -91,13 +91,22 @@ function UserDetailsPage({ match }) {
             User Since {created_at ? created_at.slice(0, 4) : null}
           </li>
           <li className="list-style">
-            <a target="_blank" rel="noopener noreferrer" href={html_url}>
+            <a
+              className="udp-link-style"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={html_url}
+            >
               GitHub
             </a>
           </li>
         </ul>
       </div>
       <span className="udp-hr-line"></span>
+
+      {repoError ? <h3>{error.message}</h3> : null}
+
+      {loading ? <h3>Loading...</h3> : null}
 
       {repoList.map(item => {
         return <RepoBox key={item.id} repoData={item} />;
