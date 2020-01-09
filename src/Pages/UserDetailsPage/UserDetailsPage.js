@@ -99,7 +99,7 @@ function UserDetailsPage({ match }) {
               rel="noopener noreferrer"
               href={html_url}
             >
-              GitHub
+              GitHub.com/{username}
             </a>
           </li>
         </ul>
@@ -109,10 +109,11 @@ function UserDetailsPage({ match }) {
       {repoError ? <h3>{error.message}</h3> : null}
 
       {loading ? <h3>Loading...</h3> : null}
-
-      {repoList.map(item => {
-        return <RepoBox key={item.id} repoData={item} />;
-      })}
+      <div className="udp-RepoBoxs-wrapper">
+        {repoList.map(item => {
+          return <RepoBox key={item.id} repoData={item} />;
+        })}
+      </div>
     </div>
   );
 }

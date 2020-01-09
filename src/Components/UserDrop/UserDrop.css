@@ -28,7 +28,7 @@
 }
 .UserDrop-name-container {
   z-index: 1;
-  padding-top: 5%;
+  padding: 5% 5%;
   width: 55%;
 }
 .UserDrop-link-style {
