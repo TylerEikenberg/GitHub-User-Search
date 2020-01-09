@@ -63,4 +63,5 @@
   position: fixed;
   bottom: 0;
   font-size: calc(10px + 1vmin);
+  z-index: 5;
 }

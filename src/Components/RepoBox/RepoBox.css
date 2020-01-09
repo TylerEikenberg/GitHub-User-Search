@@ -1,6 +1,6 @@
 .RepoBox-container {
   width: 90vw;
-  background-color: #edf2f8;
+  background-color: var(--sub-color);
   border-radius: 5px;
   display: flex;
   flex-direction: column;

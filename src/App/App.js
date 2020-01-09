@@ -16,7 +16,7 @@ function App() {
                 exact
                 className="NavBar-list"
                 activeClassName="NavBar-list-active"
-                to="/"
+                to="/home"
               >
                 <li>
                   <Icon
@@ -45,6 +45,7 @@ function App() {
             </ul>
           </header>
           {/* <Redirect exact from="/" to="/search" /> */}
+          <Route path="/home" exact component={HomePage}></Route>
           <Route path="/" exact component={SearchPage}></Route>
           <Route path="/search" exact component={SearchPage}></Route>
           <Route path="/user/:name" component={UserDetailsPage} />
@@ -56,7 +57,6 @@ function App() {
               target="_blank"
               href="https://tylereikenberg.dev/"
             >
-              {" "}
               Tyler Eikenberg | 2020
             </a>
           </footer>
