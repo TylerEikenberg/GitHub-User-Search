@@ -72,14 +72,16 @@ function UserDetailsPage({ match }) {
             <StatBox number={followers} stat={"Followers"}></StatBox>
             <StatBox number={following} stat={"Following"}></StatBox>
           </div>
-          <div className="UserDetailsPage-github-button">
-            <Icon
-              className="icon"
-              path={mdiGithubBox}
-              size={1.5}
-              color="#C8CDD4"
-            />
-          </div>
+          <a target="_blank" rel="noopener noreferrer" href={html_url}>
+            <div className="UserDetailsPage-github-button">
+              <Icon
+                className="icon"
+                path={mdiGithubBox}
+                size={1.5}
+                color="#C8CDD4"
+              />
+            </div>
+          </a>
         </div>
       </header>
 
