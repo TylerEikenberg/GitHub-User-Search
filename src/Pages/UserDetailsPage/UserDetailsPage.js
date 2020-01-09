@@ -32,7 +32,7 @@ function UserDetailsPage({ match }) {
       setLoading(true);
       try {
         const result = await axios(
-          `https://api.github.com/users/${username}/repos`
+          `https://api.github.com/users/${username}/repos?sort=updated`
         );
         setRepoList(result.data);
         setLoading(false);
