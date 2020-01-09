@@ -7,7 +7,7 @@
 }
 
 .UserDetailsPage-login-h3 {
-  color: #000;
+  color: var(--font-color);
   margin: 0;
   padding: 0;
 }
@@ -38,7 +38,7 @@
 }
 .list-style {
   list-style-type: none;
-  color: #000;
+  color: var(--font-color);
   font-size: 1rem;
 }
 .udp-name-style {

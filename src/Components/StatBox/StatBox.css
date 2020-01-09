@@ -14,8 +14,8 @@
 }
 
 .StatBox-top {
-  color: #000;
+  color: var(--font-color);
 }
 .StatBox-bottom {
-  color: #9eacbe;
+  color: var(--light-font-color);
 }

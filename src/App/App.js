@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import { SearchPage, UserDetailsPage } from "../Pages";
+import { mdiHome, mdiMagnify } from "@mdi/js";
+import Icon from "@mdi/react";
 
 function App() {
   return (
@@ -16,7 +18,14 @@ function App() {
                 activeClassName="NavBar-list-active"
                 to="/"
               >
-                <li>Home</li>
+                <li>
+                  <Icon
+                    className="icon"
+                    path={mdiHome}
+                    size={2}
+                    color="#011936"
+                  />
+                </li>
               </NavLink>
               <NavLink
                 exact
@@ -24,7 +33,14 @@ function App() {
                 activeClassName="NavBar-list-active"
                 to="/search"
               >
-                <li>Search</li>
+                <li>
+                  <Icon
+                    className="icon"
+                    path={mdiMagnify}
+                    size={2}
+                    color="#011936"
+                  />
+                </li>
               </NavLink>
             </ul>
           </header>
