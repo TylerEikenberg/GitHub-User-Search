@@ -5,12 +5,14 @@
   align-items: center;
   width: 90vw;
   margin-top: 10vh;
-  background-color: var(--sub-color);
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 5px 5px 2px rgba(168, 194, 202, 1);
-  -moz-box-shadow: 0px 5px 5px 2px rgba(168, 194, 202, 1);
-  box-shadow: 0px 5px 5px 2px rgba(168, 194, 202, 1);
 }
 .HomePage-title {
   color: rgb(113, 183, 205);
+}
+.HomePage-sub-heading {
+  text-align: center;
+  color: rgb(113, 183, 205);
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
 }
