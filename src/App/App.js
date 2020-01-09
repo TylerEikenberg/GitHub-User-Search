@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, NavLink, Route, Redirect } from "react-router-dom";
-import { SearchPage, UserDetailsPage } from "../Pages";
+import { SearchPage, UserDetailsPage, HomePage } from "../Pages";
 import { mdiHome, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
 
