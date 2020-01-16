@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Avatar from "../Avatar";
 import { render, cleanup } from "@testing-library/react";
-import "@testing-library/jest-dom/";
 import TestRenderer from "react-test-renderer";
+import "@testing-library/jest-dom/";
 
 import tyleravi from "../../../Assets";
 

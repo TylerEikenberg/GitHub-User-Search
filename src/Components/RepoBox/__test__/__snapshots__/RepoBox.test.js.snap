@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepoBox, matches snapshot 1`] = `
+<div
+  className="RepoBox-container"
+  data-testid="RepoBox-div"
+>
+  <span>
+    <a
+      className="RepoBox-repo-link"
+      data-testid="RepoBox-a"
+      href=""
+    >
+      
+    </a>
+  </span>
+  <span
+    className="RepoBox-stats-container"
+    data-testid="RepoBox-span"
+  >
+    <div
+      className="StatBox-container"
+    >
+      <h3
+        className="StatBox-h3 StatBox-top"
+      >
+        0
+      </h3>
+      <h3
+        className="StatBox-h3 StatBox-bottom"
+      >
+        Stars
+      </h3>
+    </div>
+    <div
+      className="StatBox-container"
+    >
+      <h3
+        className="StatBox-h3 StatBox-top"
+      >
+        0
+      </h3>
+      <h3
+        className="StatBox-h3 StatBox-bottom"
+      >
+        Forks
+      </h3>
+    </div>
+    <div
+      className="StatBox-container"
+    >
+      <h3
+        className="StatBox-h3 StatBox-top"
+      >
+        0
+      </h3>
+      <h3
+        className="StatBox-h3 StatBox-bottom"
+      >
+        Watchers
+      </h3>
+    </div>
+  </span>
+</div>
+`;
