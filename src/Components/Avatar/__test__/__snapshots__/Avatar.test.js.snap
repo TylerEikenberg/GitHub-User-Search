@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+
+
+exports[`matches snapshot, with image src 1`] = `
+<img
+  alt="user"
+  className="Avatar-image-styles"
+  data-testid="Avatar"
+/>
+`;
+
+exports[`matches snapshot, without image src 1`] = `
+<img
+  alt="user"
+  className="Avatar-image-styles"
+  data-testid="Avatar"
+/>
+`;
