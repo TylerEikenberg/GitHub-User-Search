@@ -1,8 +1,6 @@
 const API_KEY = process.env.API_KEY;
 const axios = require("axios");
 
-//  move action types into constants object
-
 const actions = {
   FETCH_USER_BEGIN: "FETCH_USER_BEGIN",
   FETCH_USER_SUCCESS: "FETCH_USER_SUCCESS",

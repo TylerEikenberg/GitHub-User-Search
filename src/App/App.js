@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, NavLink, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import { SearchPage, UserDetailsPage, HomePage } from "../Pages";
 import { mdiHome, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -50,11 +50,13 @@ function App() {
               </NavLink>
             </ul>
           </header>
-          {/* <Redirect exact from="/" to="/search" /> */}
-          <Route path="/home" exact component={HomePage}></Route>
-          <Route path="/" exact component={SearchPage}></Route>
-          <Route path="/search" exact component={SearchPage}></Route>
-          <Route path="/user/:name" component={UserDetailsPage} />
+
+          <Switch>
+            <Route path="/home" exact component={HomePage}></Route>
+            <Route path="/search" exact component={SearchPage}></Route>
+            <Route path="/user/:name" component={UserDetailsPage} />
+            <Route path="/" exact component={SearchPage}></Route>
+          </Switch>
           <footer className="App-footer">
             GitHub User Search by{" "}
             <a
