@@ -12,12 +12,7 @@ import "./SearchBar.css";
 function SearchBar() {
   const [username, setUsername] = useState("");
   const dispatch = useDispatch();
-  const fetchedData = useSelector(state => ({
-    data: state.fetchUserReducer.userData
-  }));
-  const fetchedDataError = useSelector(state => ({
-    error: state.fetchUserReducer.error
-  }));
+  const { userData, error } = useSelector(state => state.fetchUserReducer);
 
   useEffect(() => {
     setTimeout(() => {
@@ -37,13 +32,10 @@ function SearchBar() {
           name="username"
         />
       </form>
-      {fetchedData.data.login ? (
-        <UserDrop
-          name={fetchedData.data.login}
-          image={fetchedData.data.avatar_url}
-        />
+      {userData.login ? (
+        <UserDrop name={userData.login} image={userData.avatar_url} />
       ) : null}
-      {fetchedDataError.error ? <h3>Not found</h3> : null}
+      {error ? <h3>Not found</h3> : null}
     </div>
   );
 }
