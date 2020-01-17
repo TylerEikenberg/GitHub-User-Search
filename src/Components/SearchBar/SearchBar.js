@@ -15,9 +15,7 @@ function SearchBar() {
   const { userData, error } = useSelector(state => state.fetchUserReducer);
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(fetchUserDataAsync(username));
-    }, 500);
+    dispatch(fetchUserDataAsync(username));
   }, [username, dispatch]);
 
   return (
