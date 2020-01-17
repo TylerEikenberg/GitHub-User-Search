@@ -5,6 +5,12 @@ import { SearchPage, UserDetailsPage, HomePage } from "../Pages";
 import { mdiHome, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
 
+/**
+ * use lodash debounce for fetch call
+ * change reducer to use async await
+ * move action types into constants
+ */
+
 function App() {
   return (
     <BrowserRouter>
