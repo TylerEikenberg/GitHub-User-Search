@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUserDataAsync } from "../../Redux/Actions/";
 import { UserDrop } from "../index";
 import "./SearchBar.css";
+import useDebounce from "../../hooks/useDebounce";
 
 /**
  * figure out how to delay fetch request
@@ -13,10 +14,11 @@ function SearchBar() {
   const [username, setUsername] = useState("");
   const dispatch = useDispatch();
   const { userData, error } = useSelector(state => state.fetchUserReducer);
+  const debouncedSearchTerm = useDebounce(username, 800);
 
   useEffect(() => {
-    dispatch(fetchUserDataAsync(username));
-  }, [username, dispatch]);
+    dispatch(fetchUserDataAsync(debouncedSearchTerm));
+  }, [debouncedSearchTerm, dispatch]);
 
   return (
     <div className="SearchBar-container">
