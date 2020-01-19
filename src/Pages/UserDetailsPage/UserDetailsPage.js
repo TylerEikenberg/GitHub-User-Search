@@ -1,46 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUserDataAsync } from "../../Redux/Actions";
+import { fetchUserDataAsync, fetchReposDataAsync } from "../../Redux/Actions";
 import "./UserDetailsPage.css";
 import { Avatar, StatBox, RepoBox } from "../../Components/";
 import { mdiGithubBox } from "@mdi/js";
 import Icon from "@mdi/react";
-const axios = require("axios");
-
-/**
- * -todo
- *
- * make another fetch to get list of users github repos
- * create component that will display a single repo
- * display all repos
- */
 
 function UserDetailsPage({ match }) {
   const [username] = useState(match.params.name);
-  const [repoList, setRepoList] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [repoError, setRepoError] = useState(null);
   const dispatch = useDispatch();
-  const { fetchUserReducer: userData, fetchedDataError: error } = useSelector(
-    state => state
-  );
+  const { fetchUserReducer, fetchReposReducer } = useSelector(state => state);
 
   useEffect(() => {
     // comment back in to fetch
     dispatch(fetchUserDataAsync(username));
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const result = await axios(
-          `https://api.github.com/users/${username}/repos?sort=updated`
-        );
-        setRepoList(result.data);
-        setLoading(false);
-      } catch (error) {
-        setRepoError(error.response.data);
-      }
-    };
-    fetchData();
+    dispatch(fetchReposDataAsync(username));
   }, [username, dispatch]);
 
   // const { fetchUserReducer: userData } = useSelector(state => state);
@@ -54,7 +28,7 @@ function UserDetailsPage({ match }) {
     followers,
     following,
     created_at
-  } = userData.userData;
+  } = fetchUserReducer.userData;
 
   return (
     <div className="UserDetailsPage-container">
@@ -106,11 +80,11 @@ function UserDetailsPage({ match }) {
       </div>
       <span className="udp-hr-line"></span>
 
-      {repoError ? <h3>{error.message}</h3> : null}
+      {fetchReposReducer.error ? <h3>{fetchReposReducer.error}</h3> : null}
 
-      {loading ? <h3>Loading...</h3> : null}
+      {fetchReposReducer.loading ? <h3>Loading...</h3> : null}
       <div className="udp-RepoBoxs-wrapper">
-        {repoList.map(item => {
+        {fetchReposReducer.repos.map(item => {
           return <RepoBox key={item.id} repoData={item} />;
         })}
       </div>

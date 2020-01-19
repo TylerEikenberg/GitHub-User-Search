@@ -5,9 +5,20 @@ import {
   fetchUserDataAsync
 } from "./userActions";
 
+import {
+  fetchReposData,
+  fetchReposDataSuccess,
+  fetchReposDataFailure,
+  fetchReposDataAsync
+} from "./repoActions";
+
 export {
   fetchUserData,
   fetchUserDataSuccess,
   fetchUserDataFailure,
-  fetchUserDataAsync
+  fetchUserDataAsync,
+  fetchReposData,
+  fetchReposDataSuccess,
+  fetchReposDataFailure,
+  fetchReposDataAsync
 };
