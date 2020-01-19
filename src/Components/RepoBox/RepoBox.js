@@ -12,12 +12,20 @@ function RepoBox({
   }
 }) {
   return (
-    <div data-testid="RepoBox-div" className="RepoBox-container">
+    <a
+      data-testid="RepoBox-div"
+      className="RepoBox-container"
+      href={repoData.html_url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span>
         <a
           data-testid="RepoBox-a"
           className="RepoBox-repo-link"
           href={repoData.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {repoData.name}
         </a>
@@ -27,7 +35,7 @@ function RepoBox({
         <StatBox number={repoData.forks} stat={"Forks"} />
         <StatBox number={repoData.watchers} stat={"Watchers"} />
       </span>
-    </div>
+    </a>
   );
 }
 

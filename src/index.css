@@ -1,6 +1,7 @@
 :root {
   --bg-color: #cdedf6;
   --sub-color: #edf2f8;
+  --sub-color-hover: #d8dce2;
   --link-color: #011936;
   --link-color-hover: #5d6c7f;
   --app-font: "Rubik", sans-serif;
