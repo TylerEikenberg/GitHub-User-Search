@@ -20,6 +20,12 @@
   margin-top: -15px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+.UserDrop-wrapper:hover {
+  background-color: var(--user-drop-hover);
+}
+.UserDrop-wrapper:hover::after {
+  background-color: var(--user-drop-hover);
+}
 
 .UserDrop-image-container {
   z-index: 1;
