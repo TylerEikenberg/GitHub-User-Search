@@ -8,6 +8,8 @@
 .SearchBar-input {
   width: 50vw;
   font-size: 1.5rem;
-  /* background-color: var(--light-font-color); */
-  border: none;
+  border: 3px solid var(--light-font-color);
+  border-radius: 16px;
+  padding-left: 10px;
+  padding-bottom: 3px;
 }
