@@ -1,7 +1,6 @@
-const API_KEY = process.env.API_KEY;
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const API_KEY = process.env.REACT_APP_API_KEY;
 const axios = require('axios');
+axios.defaults.headers.common = { Authorization: `bearer ${API_KEY}` };
 
 const actions = {
   FETCH_USER_BEGIN: 'FETCH_USER_BEGIN',
@@ -23,13 +22,7 @@ export const fetchUserDataAsync = username => {
   return async dispatch => {
     try {
       const { data } = await axios.get(
-        `https://api.github.com/users/${username}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
-        {
-          auth: {
-            username: 'tylereikenberg',
-            password: API_KEY
-          }
-        }
+        `https://api.github.com/users/${username}`
       );
       dispatch(fetchUserDataSuccess(data));
     } catch (error) {
