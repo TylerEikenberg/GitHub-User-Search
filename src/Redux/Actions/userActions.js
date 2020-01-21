@@ -26,6 +26,7 @@ export const fetchUserDataAsync = username => {
         `https://api.github.com/users/${username}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
         {
           auth: {
+            username: 'tylereikenberg',
             password: API_KEY
           }
         }
