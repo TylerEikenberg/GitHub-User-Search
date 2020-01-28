@@ -1,50 +1,50 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
-import { SearchPage, UserDetailsPage, HomePage } from "../Pages";
-import { mdiHome, mdiMagnify } from "@mdi/js";
-import Icon from "@mdi/react";
+import React from 'react';
+import './App.css';
+import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
+import { SearchPage, UserDetailsPage, HomePage } from '../Pages';
+import { mdiHome, mdiMagnify } from '@mdi/js';
+import Icon from '@mdi/react';
 
 /**
- * use lodash debounce for fetch call
- * change reducer to use async await
- * move action types into constants
+ * create sidebar component to slide in and out
+ * add hamburger to nav, move home and search to sidebar
+ *
  */
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className="App-body">
-          <header className="App-Navbar">
-            <ul className="Navbar-links-container">
+      <div className='App'>
+        <div className='App-body'>
+          <header className='App-Navbar'>
+            <ul className='Navbar-links-container'>
               <NavLink
                 exact
-                className="NavBar-list"
-                activeClassName="NavBar-list-active"
-                to="/home"
+                className='NavBar-list'
+                activeClassName='NavBar-list-active'
+                to='/home'
               >
                 <li>
                   <Icon
-                    className="icon"
+                    className='icon'
                     path={mdiHome}
                     size={2}
-                    color="#011936"
+                    color='#011936'
                   />
                 </li>
               </NavLink>
               <NavLink
                 exact
-                className="NavBar-list"
-                activeClassName="NavBar-list-active"
-                to="/search"
+                className='NavBar-list'
+                activeClassName='NavBar-list-active'
+                to='/search'
               >
                 <li>
                   <Icon
-                    className="icon"
+                    className='icon'
                     path={mdiMagnify}
                     size={2}
-                    color="#011936"
+                    color='#011936'
                   />
                 </li>
               </NavLink>
@@ -52,18 +52,18 @@ function App() {
           </header>
 
           <Switch>
-            <Route path="/home" exact component={HomePage}></Route>
-            <Route path="/search" exact component={SearchPage}></Route>
-            <Route path="/user/:name" component={UserDetailsPage} />
-            <Route path="/" exact component={SearchPage}></Route>
+            <Route path='/home' exact component={HomePage}></Route>
+            <Route path='/search' exact component={SearchPage}></Route>
+            <Route path='/user/:name' component={UserDetailsPage} />
+            <Route path='/' exact component={SearchPage}></Route>
           </Switch>
-          <footer className="App-footer">
-            GitHub User Search by{" "}
+          <footer className='App-footer'>
+            GitHub User Search by{' '}
             <a
-              className="NavBar-list"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://tylereikenberg.dev/"
+              className='NavBar-list'
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://tylereikenberg.dev/'
             >
               Tyler Eikenberg | 2020
             </a>
